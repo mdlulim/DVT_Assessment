@@ -23,7 +23,7 @@ export const AddExpense = () => {
       <h3>Add new Expenses</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
-          <label htmlFor="text">Text</label>
+          <label htmlFor="text"></label>
           <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Expence type..." />
         </div>
         <div className="form-control">

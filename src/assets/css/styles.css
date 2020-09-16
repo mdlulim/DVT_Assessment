@@ -1,0 +1,12 @@
+.header{
+    background: #007fba url(https://www.dvt.co.za/images/page-headers/backgrounds/blue-header-background.jpg) no-repeat scroll center bottom;
+    padding: 130px 0px 50px 0px; 
+    color: white;
+}
+.textHeader{
+    margin-left: 6%;
+    font-size: 30px;
+}
+#root{
+    width: 100%;
+  }

@@ -2,8 +2,10 @@ import React from 'react';
 
 export const Header = () => {
   return (
-    <h2>
-      Expense Tracker
-    </h2>
+    <div class="header">
+      <h1 class="textHeader">
+        DVT Expenses Tracker
+      </h1>
+    </div>
   )
 }

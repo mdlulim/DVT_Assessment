@@ -29,24 +29,25 @@ export default function Home() {
     <div className={classes.root}>
        <Header />
       <GlobalProvider>
+        <div className="myContainer">
       <Grid container spacing={3}>
-        <Grid item xs={10}>
-          <Paper className={classes.paper}>
-          <Balance />
-          </Paper>
+        <Grid item xs={12}>
+          <br />
         </Grid>
-        <Grid item xs={12} sm={5}>
+        <Grid item xs={12} sm={6}>
+        <Balance />
           <Paper className={classes.paper}>
               <AddExpense />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={5}>
+        <Grid item xs={12} sm={6}>
           <Paper className={classes.paper}>
           <IncomeExpenses />
           <ExpensesList />
           </Paper>
         </Grid>
       </Grid>
+      </div>
       </GlobalProvider>
     </div>
   );

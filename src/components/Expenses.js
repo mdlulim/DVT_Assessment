@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
-
+//list expenses and add delete function on the expense list
 export const Expenses = ({ expenses }) => {
   const { deleteExpense } = useContext(GlobalContext);
 

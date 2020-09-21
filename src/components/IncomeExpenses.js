@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-
+// get total amout of all income and expences
 export const IncomeExpenses = () => {
   const { expenses } = useContext(GlobalContext);
 

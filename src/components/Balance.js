@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Alert } from 'reactstrap';
 import { GlobalContext } from '../context/GlobalState';
 
+//calculate and display the remaining balance
 export const Balance = () => {
   const { expenses } = useContext(GlobalContext);
 
@@ -11,10 +12,10 @@ export const Balance = () => {
 
   return (
     <div>
-    {total ? <Alert color="success">
+    {total <= -1000 ? <Alert color="danger">
                 <h4>Your Balance</h4>
                 <h1>R{total}</h1>
-             </Alert>: <Alert color="warning">
+             </Alert>: <Alert color="success">
                           <h4>Your Balance</h4>
                           <h1>R{total}</h1>
                         </Alert>}

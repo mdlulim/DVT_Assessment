@@ -1,38 +1,37 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
 
-export const AddExpense = () => {
+//Add income and create an id to eact income
+export const AddIncome = () => {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState(0);
 
-  const { addExpense } = useContext(GlobalContext);
-  //Add expenses and create an id to eact expense
+  const { addIncome } = useContext(GlobalContext);
+
   const onSubmit = e => {
     e.preventDefault();
 
-    const newExpense = {
+    const newIncome = {
       id: Math.floor(Math.random() * 100000000),
       text,
       amount: +amount
     }
-    addExpense(newExpense);
+    addIncome(newIncome);
   }
 
   return (
     <>
-      <h3>Add new Expenses</h3>
+      <h3>Add Income</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="text"></label>
-          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Expence type..." />
+          <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Income type..." />
         </div>
         <div className="form-control">
-          <label htmlFor="amount">
-            (add negative amount for expense and positive amount forincome) <br /> Eg(expense -300)</label
-          >
+          <label htmlFor="amount">Income</label>
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
-        <button className="btn btn-info">Add </button>
+        <button className="btn">Add Income</button>
       </form>
     </>
   )

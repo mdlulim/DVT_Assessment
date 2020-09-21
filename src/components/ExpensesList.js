@@ -3,6 +3,7 @@ import { Expenses } from './Expenses';
 
 import { GlobalContext } from '../context/GlobalState';
 
+// list all expenses 
 export const ExpensesList = () => {
   const { expenses } = useContext(GlobalContext);
 
